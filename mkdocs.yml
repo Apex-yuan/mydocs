@@ -1,4 +1,4 @@
-site_name: mydocs
+site_name: xiaoyuan's note
 site_author: Apex-yuan
 
 nav:
@@ -8,4 +8,4 @@ nav:
             - STM32/STM32HAL库微秒延时函数的实现---DWT和SysTick.md
         
         
-theme: readthedocs
+#theme: readthedocs
