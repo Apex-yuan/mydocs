@@ -7,7 +7,7 @@ repo_url: https://github.com/mkdocs/mkdocs/
 edit_uri: ""
 
 theme:
-    name: mkdocs
+    name: readthedocs
     highlightjs: true
     hljs_languages:
         - yaml
