@@ -28,9 +28,9 @@ nav:
     - BalanceCar:
         - 平衡车-原理篇: BalanceCar/平衡车-原理篇.md
     - Marlin:
-        - marlin应用到STM32实践（续）: marlin应用到STM32实战（续）.md
+        - marlin应用到STM32实践（续）: Marlin/marlin应用到STM32实战（续）.md
     - PID:
-        - Improving the Beginner’s PID: Improving the Beginner’s PID.md
+        - Improving the Beginner’s PID: PID/Improving the Beginner’s PID.md
 
 #extra_css:
 #    - css/extra.css
