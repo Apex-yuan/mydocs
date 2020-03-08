@@ -28,7 +28,8 @@ nav:
         - License: about/license.md
 
 extra_css:
-    - css/extra.css
+    - css/theme.css
+    - css/theme_extra.css
 
 markdown_extensions:
     - toc:
