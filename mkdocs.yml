@@ -1,9 +1,9 @@
-site_name: MkDocs
-site_url: https://www.mkdocs.org
-site_description: Project documentation with Markdown.
-site_author: MkDocs Team
+site_name: Apex-yuan
+site_url: https://github/Apex-yuan.com
+site_description: Apex-yuan's notes.
+site_author: Apex-yuan
 
-repo_url: https://github.com/mkdocs/mkdocs/
+repo_url: https://github/Apex-yuan.com
 edit_uri: ""
 
 theme:
@@ -12,25 +12,28 @@ theme:
     hljs_languages:
         - yaml
         - django
+        - c
 
 nav:
-    - 前言: index.md
+    - Preface: 
+        - 前言: index.md
+    - Arduino:
+        - Arduino内核中的知识点解读: Arduino/Arduino内核中的知识点解读.md
     - STM32:
         - STM32 HAL: 
             - STM32HAL库串口处理---中断收发: STM32/STM32HAL库串口处理---中断收发.md
             - STM32HAL库微秒延时函数的实现: STM32/STM32HAL库微秒延时函数的实现---DWT和SysTick.md
-        - Styling Your Docs: user-guide/styling-your-docs.md
-        - Configuration: user-guide/configuration.md
-        - Deploying Your Docs: user-guide/deploying-your-docs.md
-        - Custom Themes: user-guide/custom-themes.md
-        - Plugins: user-guide/plugins.md
-    - About:
-        - Release Notes: about/release-notes.md
-        - Contributing: about/contributing.md
-        - License: about/license.md
+    - Arduino_Core_STM32:
+        - Arduino_Core_STM32---pinMode()实现分析: Arduino_Core_STM32/Arduino_Core_STM32---pinMode()实现分析.md
+    - BalanceCar:
+        - 平衡车-原理篇: BalanceCar/平衡车-原理篇.md
+    - Marlin:
+        - marlin应用到STM32实践（续）: marlin应用到STM32实战（续）.md
+    - PID:
+        - Improving the Beginner’s PID: Improving the Beginner’s PID.md
 
-extra_css:
-    - css/extra.css
+#extra_css:
+#    - css/extra.css
 
 markdown_extensions:
     - toc:
@@ -38,10 +41,10 @@ markdown_extensions:
     - admonition
     - def_list
     - mdx_gh_links:
-        user: mkdocs
-        repo: mkdocs
+        user: Apex-yuan
+        repo: mydocs
 
-copyright: Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
+copyright: Copyright &copy; 2020 <a href="https://github/Apex-yuan.com">Apex-yuan</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">Apex-yuan</a>.
 google_analytics: ['UA-27795084-5', 'mkdocs.org']
 
 plugins:
