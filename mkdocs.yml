@@ -14,9 +14,11 @@ theme:
         - django
 
 nav:
-    - Home: index.md
-    - User Guide:
-        - Writing Your Docs: user-guide/writing-your-docs.md
+    - 前言: index.md
+    - STM32:
+        - STM32 HAL: 
+            - STM32/STM32HAL库串口处理---中断收发.md
+            - STM32/STM32HAL库微秒延时函数的实现---DWT和SysTick.md
         - Styling Your Docs: user-guide/styling-your-docs.md
         - Configuration: user-guide/configuration.md
         - Deploying Your Docs: user-guide/deploying-your-docs.md
@@ -28,8 +30,7 @@ nav:
         - License: about/license.md
 
 extra_css:
-    - css/theme.css
-    - css/theme_extra.css
+    - css/extra.css
 
 markdown_extensions:
     - toc:

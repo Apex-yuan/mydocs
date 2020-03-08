@@ -4,6 +4,8 @@ Project documentation with&nbsp;Markdown.
 
 ---
 
+@[TOC]
+
 ## Overview
 
 MkDocs is a **fast**, **simple** and **downright gorgeous** static site
@@ -81,7 +83,7 @@ Install [Python] by downloading an installer appropriate for your system from
     If you are installing Python on Windows, be sure to check the box to have
     Python added to your PATH if the installer offers such an option (it's
     normally off by default).
-
+    
     ![Add Python to PATH](img/win-py-install.png)
 
 [python.org]: https://www.python.org/downloads/
@@ -125,7 +127,7 @@ mkdocs, version 0.15.3
 
         pip install click-man
         click-man --target path/to/man/pages mkdocs
-
+    
     See the [click-man documentation] for an explanation of why manpages are
     not automatically generated and installed by pip.
 
@@ -138,10 +140,10 @@ mkdocs, version 0.15.3
 
     A quick solution may be to preface every Python command with `python -m`
     like this:
-
+    
         python -m pip install mkdocs
         python -m mkdocs
-
+    
     For a more permanent solution, you may need to edit your `PATH` environment
     variable to include the `Scripts` directory of your Python installation.
     Recent versions of Python include a script to do this for you. Navigate to
