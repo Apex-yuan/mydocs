@@ -27,7 +27,7 @@ nav:
         - Arduino_Core_STM32---pinMode()实现分析: Arduino_Core_STM32/Arduino_Core_STM32---pinMode()实现分析.md
     - BalanceCar:
         - 平衡车-原理篇: BalanceCar/平衡车-原理篇.md
-    - C
+    - C:
         - C语言知识点---局部数组的长度可用变量表示: C/C语言知识点---局部数组的长度可用变量表示.md
     - Communication: 
         - 串口协议包的接收及解析处理: Communication/串口协议包的接收及解析处理.md
