@@ -3,7 +3,7 @@ site_url: https://blog.csdn.net/xiaoyuanwuhui
 site_description: Apex-yuan's notes.
 site_author: Apex-yuan
 
-repo_url: https://github/Apex-yuan/mydocs
+repo_url: https://github/Apex-yuan/mydocs/
 edit_uri: ""
 
 theme:
@@ -40,8 +40,8 @@ nav:
     - Python:
         - python_learning: Python/python_learning.md
 
-#extra_css:
-#    - css/extra.css
+extra_css:
+    - css/extra.css
 
 markdown_extensions:
     - toc:
