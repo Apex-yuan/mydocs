@@ -1,31 +1,55 @@
-# python learing
-## 安装
+# runoob python learing note
 
-## 简介
+基于python3
 
-在脚本顶部添加以下命令可以让python脚本像shell脚本一样直接可执行
+## 一、简介
 
-```python
-#!/usr/bin/env python3
-```
+Python是一种**解释性**、**交互式**、**面向对象**的脚本语言。Python 是由 Guido van Rossum 在八十年代末和九十年代初，在荷兰国家数学和计算机科学研究所设计出来的。
 
-修改脚本权限
+## 二、环境搭建
 
-```bash
-$ chmod +x hello.py
-```
+### 安装Python
 
-执行脚本
+### Python环境变量
 
-```bash
-./hello.py
-```
+| 变量名        | 描述                                                         |
+| :------------ | :----------------------------------------------------------- |
+| PYTHONPATH    | PYTHONPATH是Python搜索路径，默认我们import的模块都会从PYTHONPATH里面寻找。 |
+| PYTHONSTARTUP | Python启动后，先寻找PYTHONSTARTUP环境变量，然后执行此变量指定的文件中的代码。 |
+| PYTHONCASEOK  | 加入PYTHONCASEOK的环境变量, 就会使python导入模块的时候不区分大小写. |
+| PYTHONHOME    | 另一种模块搜索路径。它通常内嵌于的PYTHONSTARTUP或PYTHONPATH目录中，使得两个模块库更容易切换。 |
 
+### 运行Python
 
+- 交互式运行
 
+- 脚本式运行
 
+  ---
 
-## 语法
+  **`Note:`**
+
+  在脚本顶部添加以下命令可以让python脚本像shell脚本一样直接可执行（linux环境下）
+
+  ```python
+  #!/usr/bin/env python3
+  ```
+
+  修改脚本权限
+
+  ```bash
+  $ chmod +x hello.py
+  ```
+
+  执行脚本
+
+  ```bash
+  ./hello.py
+  ```
+
+  ---
+
+## 三、基础语法
 
 ### 编码
 
@@ -117,11 +141,15 @@ a = b = c = 1;
 a, b, c = 1, 2, "apexyuan"
 ```
 
+### pass语句
 
+Python中pass是空语句，是为了保持程序结构的完整性。
 
-## 数据类型
+pass 不做任何事情，一般用做占位语句。
 
-python 中变量不需要声明，每个变量在使用前必须赋值，变量赋值后该变量才会被创建
+## 四、基本数据类型
+
+python 中变量不需要声明，<u>每个变量在使用前必须赋值</u>，**变量赋值后该变量才会被创建**。
 
 python 中，变量就是变量没有类型，我们所说的“类型”是变量所指的内存中对象的类型
 
@@ -184,6 +212,65 @@ print(a)
 ```
 
 ---
+
+#### 数据类型转换
+
+- **int(x)** 将x转换为一个整数。
+- **float(x)** 将x转换到一个浮点数。
+-  **complex(x)** 将x转换到一个复数，实数部分为 x，虚数部分为 0。
+- **complex(x, y)** 将 x 和 y 转换到一个复数，实数部分为 x，虚数部分为 y。x 和 y 是数字表达式。
+
+#### 数学函数
+
+| 函数                                                         | 返回值 ( 描述 )                                              |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [abs(x)](https://www.runoob.com/python3/python3-func-number-abs.html) | 返回数字的绝对值，如abs(-10) 返回 10                         |
+| [ceil(x) ](https://www.runoob.com/python3/python3-func-number-ceil.html) | 返回数字的上入整数，如math.ceil(4.1) 返回 5                  |
+| cmp(x, y)                                                    | 如果 x < y 返回 -1, 如果 x == y 返回 0, 如果 x > y 返回 1。 **Python 3 已废弃，使用 (x>y)-(x。 |
+| [exp(x) ](https://www.runoob.com/python3/python3-func-number-exp.html) | 返回e的x次幂(ex),如math.exp(1) 返回2.718281828459045         |
+| [fabs(x)](https://www.runoob.com/python3/python3-func-number-fabs.html) | 返回数字的绝对值，如math.fabs(-10) 返回10.0                  |
+| [floor(x) ](https://www.runoob.com/python3/python3-func-number-floor.html) | 返回数字的下舍整数，如math.floor(4.9)返回 4                  |
+| [log(x) ](https://www.runoob.com/python3/python3-func-number-log.html) | 如math.log(math.e)返回1.0,math.log(100,10)返回2.0            |
+| [log10(x) ](https://www.runoob.com/python3/python3-func-number-log10.html) | 返回以10为基数的x的对数，如math.log10(100)返回 2.0           |
+| [max(x1, x2,...) ](https://www.runoob.com/python3/python3-func-number-max.html) | 返回给定参数的最大值，参数可以为序列。                       |
+| [min(x1, x2,...) ](https://www.runoob.com/python3/python3-func-number-min.html) | 返回给定参数的最小值，参数可以为序列。                       |
+| [modf(x) ](https://www.runoob.com/python3/python3-func-number-modf.html) | 返回x的整数部分与小数部分，两部分的数值符号与x相同，整数部分以浮点型表示。 |
+| [pow(x, y)](https://www.runoob.com/python3/python3-func-number-pow.html) | x**y 运算后的值。                                            |
+| [round(x [,n\])](https://www.runoob.com/python3/python3-func-number-round.html) | 返回浮点数 x 的四舍五入值，如给出 n 值，则代表舍入到小数点后的位数。 **其实准确的说是保留值将保留到离上一位更近的一端。** |
+| [sqrt(x) ](https://www.runoob.com/python3/python3-func-number-sqrt.html) | 返回数字x的平方根。                                          |
+
+#### 随机数函数
+
+| 函数                                                         | 描述                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| [choice(seq)](https://www.runoob.com/python3/python3-func-number-choice.html) | 从序列的元素中随机挑选一个元素，比如random.choice(range(10))，从0到9中随机挑选一个整数。 |
+| [randrange ([start,\] stop [,step]) ](https://www.runoob.com/python3/python3-func-number-randrange.html) | 从指定范围内，按指定基数递增的集合中获取一个随机数，基数默认值为 1 |
+| [random() ](https://www.runoob.com/python3/python3-func-number-random.html) | 随机生成下一个实数，它在[0,1)范围内。                        |
+| [seed([x]) ](https://www.runoob.com/python3/python3-func-number-seed.html) | 改变随机数生成器的种子seed。如果你不了解其原理，你不必特别去设定seed，Python会帮你选择seed。 |
+| [shuffle(lst) ](https://www.runoob.com/python3/python3-func-number-shuffle.html) | 将序列的所有元素随机排序                                     |
+| [uniform(x, y)](https://www.runoob.com/python3/python3-func-number-uniform.html) | 随机生成下一个实数，它在[x,y]范围内。                        |
+
+#### 三角函数
+
+| 函数                                                         | 描述                                               |
+| :----------------------------------------------------------- | :------------------------------------------------- |
+| [acos(x)](https://www.runoob.com/python3/python3-func-number-acos.html) | 返回x的反余弦弧度值。                              |
+| [asin(x)](https://www.runoob.com/python3/python3-func-number-asin.html) | 返回x的反正弦弧度值。                              |
+| [atan(x)](https://www.runoob.com/python3/python3-func-number-atan.html) | 返回x的反正切弧度值。                              |
+| [atan2(y, x)](https://www.runoob.com/python3/python3-func-number-atan2.html) | 返回给定的 X 及 Y 坐标值的反正切值。               |
+| [cos(x)](https://www.runoob.com/python3/python3-func-number-cos.html) | 返回x的弧度的余弦值。                              |
+| [hypot(x, y)](https://www.runoob.com/python3/python3-func-number-hypot.html) | 返回欧几里德范数 sqrt(x*x + y*y)。                 |
+| [sin(x)](https://www.runoob.com/python3/python3-func-number-sin.html) | 返回的x弧度的正弦值。                              |
+| [tan(x)](https://www.runoob.com/python3/python3-func-number-tan.html) | 返回x弧度的正切值。                                |
+| [degrees(x)](https://www.runoob.com/python3/python3-func-number-degrees.html) | 将弧度转换为角度,如degrees(math.pi/2) ，  返回90.0 |
+| [radians(x)](https://www.runoob.com/python3/python3-func-number-radians.html) | 将角度转换为弧度                                   |
+
+#### 数学常量
+
+| 常量 | 描述      |
+| ---- | --------- |
+| pi   | 圆周率π   |
+| e    | 自然常数e |
 
 
 
@@ -372,9 +459,9 @@ print(info_dict.values())
 
 | 函数                                                         | 描述                                                |
 | :----------------------------------------------------------- | :-------------------------------------------------- |
-| [int(x [,base\])](https://www.runoob.com/python3/python-func-int.html) | 将x转换为一个整数                                   |
+| int(x [,base\])                                              | 将x转换为一个整数                                   |
 | [float(x)](https://www.runoob.com/python3/python-func-float.html) | 将x转换到一个浮点数                                 |
-| [complex(real [,imag\])](https://www.runoob.com/python3/python-func-complex.html) | 创建一个复数                                        |
+| complex(real [,imag\])                                       | 创建一个复数                                        |
 | [str(x)](https://www.runoob.com/python3/python-func-str.html) | 将对象 x 转换为字符串                               |
 | [repr(x)](https://www.runoob.com/python3/python-func-repr.html) | 将对象 x 转换为表达式字符串                         |
 | [eval(str)](https://www.runoob.com/python3/python-func-eval.html) | 用来计算在字符串中的有效Python表达式,并返回一个对象 |
@@ -387,3 +474,244 @@ print(info_dict.values())
 | [ord(x)](https://www.runoob.com/python3/python-func-ord.html) | 将一个字符转换为它的整数值                          |
 | [hex(x)](https://www.runoob.com/python3/python-func-hex.html) | 将一个整数转换为一个十六进制字符串                  |
 | [oct(x)](https://www.runoob.com/python3/python-func-oct.html) | 将一个整数转换为一个八进制字符串                    |
+
+## 五、运算符
+
+### 算数运算符(+ - * / ** % //)
+
+| 运算符 | 描述                                            | 实例               |
+| :----- | :---------------------------------------------- | :----------------- |
+| +      | 加 - 两个对象相加                               | a + b 输出结果 31  |
+| -      | 减 - 得到负数或是一个数减去另一个数             | a - b 输出结果 -11 |
+| *      | 乘 - 两个数相乘或是返回一个被重复若干次的字符串 | a * b 输出结果 210 |
+| /      | 除 - x 除以 y                                   | b / a 输出结果 2.1 |
+| %      | 取模 - 返回除法的余数                           | b % a 输出结果 1   |
+| **     | 幂 - 返回x的y次幂                               | a**b 为10的21次方  |
+| //     | 取整除 - 向下取接近商的整数                     | 9//2为4，-9//2为-5 |
+
+### 关系运算符(== != > < >= <=)
+
+| 运算符 | 描述                                                         | 实例                  |
+| :----- | :----------------------------------------------------------- | :-------------------- |
+| ==     | 等于 - 比较对象是否相等                                      | (a == b) 返回 False。 |
+| !=     | 不等于 - 比较两个对象是否不相等                              | (a != b) 返回 True。  |
+| >      | 大于 - 返回x是否大于y                                        | (a > b) 返回 False。  |
+| <      | 小于 - 返回x是否小于y。所有比较运算符返回1表示真，返回0表示假。这分别与特殊的变量True和False等价。注意，这些变量名的大写。 | (a < b) 返回 True。   |
+| >=     | 大于等于 - 返回x是否大于等于y。                              | (a >= b) 返回 False。 |
+| <=     | 小于等于 - 返回x是否小于等于y。                              | (a <= b) 返回 True。  |
+
+### 赋值运算符
+
+| 运算符 | 描述                                                         | 实例                                  |
+| :----- | :----------------------------------------------------------- | :------------------------------------ |
+| =      | 简单的赋值运算符                                             | c = a + b 将 a + b 的运算结果赋值为 c |
+| +=     | 加法赋值运算符                                               | c += a 等效于 c = c + a               |
+| -=     | 减法赋值运算符                                               | c -= a 等效于 c = c - a               |
+| *=     | 乘法赋值运算符                                               | c *= a 等效于 c = c * a               |
+| /=     | 除法赋值运算符                                               | c /= a 等效于 c = c / a               |
+| %=     | 取模赋值运算符                                               | c %= a 等效于 c = c % a               |
+| **=    | 幂赋值运算符                                                 | c \**= a 等效于 c = c ** a            |
+| //=    | 取整除赋值运算符                                             | c //= a 等效于 c = c // a             |
+| :=     | 海象运算符，可在表达式内部为变量赋值。**Python3.8 版本新增运算符**。 | 示例如下                              |
+
+`:=`示例，该表达式可以避免调用`len()`两次
+
+```python
+if (n := len(a)) > 10:
+    print(f"List is too long ({n} elements, expected <= 10)")
+```
+
+
+
+### 逻辑运算符
+
+| 运算符 | 逻辑表达式 | 描述                                                         | 实例                    |
+| :----- | :--------- | :----------------------------------------------------------- | :---------------------- |
+| and    | x and y    | 布尔"与" - 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。 | (a and b) 返回 20。     |
+| or     | x or y     | 布尔"或" - 如果 x 是 True，它返回 x 的值，否则它返回 y 的计算值。 | (a or b) 返回 10。      |
+| not    | not x      | 布尔"非" - 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。 | not(a and b) 返回 False |
+
+### 位运算符
+
+| 运算符 | 描述                                                         | 实例                                                         |
+| :----- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| &      | 按位与运算符：参与运算的两个值,如果两个相应位都为1,则该位的结果为1,否则为0 | (a & b) 输出结果 12 ，二进制解释： 0000 1100                 |
+| \|     | 按位或运算符：只要对应的二个二进位有一个为1时，结果位就为1。 | (a \| b) 输出结果 61 ，二进制解释： 0011 1101                |
+| ^      | 按位异或运算符：当两对应的二进位相异时，结果为1              | (a ^ b) 输出结果 49 ，二进制解释： 0011 0001                 |
+| ~      | 按位取反运算符：对数据的每个二进制位取反,即把1变为0,把0变为1。**~x** 类似于 **-x-1** | (~a ) 输出结果 -61 ，二进制解释： 1100 0011， 在一个有符号二进制数的补码形式。 |
+| <<     | 左移动运算符：运算数的各二进位全部左移若干位，由"<<"右边的数指定移动的位数，高位丢弃，低位补0。 | a << 2 输出结果 240 ，二进制解释： 1111 0000                 |
+| >>     | 右移动运算符：把">>"左边的运算数的各二进位全部右移若干位，">>"右边的数指定移动的位数 | a >> 2 输出结果 15 ，二进制解释： 0000 1111                  |
+
+### 成员运算符
+
+| 运算符 | 描述                                                    | 实例                                              |
+| :----- | :------------------------------------------------------ | :------------------------------------------------ |
+| in     | 如果在指定的序列中找到值返回 True，否则返回 False。     | x 在 y 序列中 , 如果 x 在 y 序列中返回 True。     |
+| not in | 如果在指定的序列中没有找到值返回 True，否则返回 False。 | x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。 |
+
+### 身份运算符
+
+身份运算符用于比较两个对象的存储单元
+
+| 运算符 | 描述                                        | 实例                                                         |
+| :----- | :------------------------------------------ | :----------------------------------------------------------- |
+| is     | is 是判断两个标识符是不是引用自一个对象     | **x is y**, 类似 **id(x) == id(y)** , 如果引用的是同一个对象则返回 True，否则返回 False |
+| is not | is not 是判断两个标识符是不是引用自不同对象 | **x is not y** ， 类似 **id(a) != id(b)**。如果引用的不是同一个对象则返回结果 True，否则返回 False。 |
+
+---
+
+**`Note:`**
+
+`id()`函数用于获取对象的内存地址
+
+---
+
+### 运算符优先级
+
+| 运算符                   | 描述                                                   |
+| :----------------------- | :----------------------------------------------------- |
+| **                       | 指数 (最高优先级)                                      |
+| ~ + -                    | 按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@) |
+| * / % //                 | 乘，除，求余数和取整除                                 |
+| + -                      | 加法减法                                               |
+| >> <<                    | 右移，左移运算符                                       |
+| &                        | 位 'AND'                                               |
+| ^ \|                     | 位运算符                                               |
+| <= < > >=                | 比较运算符                                             |
+| == !=                    | 等于运算符                                             |
+| = %= /= //= -= += *= **= | 赋值运算符                                             |
+| is is not                | 身份运算符                                             |
+| in not in                | 成员运算符                                             |
+| not and or               | 逻辑运算符                                             |
+
+## 六、流程控制
+
+### 条件语句
+
+### 循环语句
+
+#### while
+
+```python
+while <expr>:
+    <statement(s)>
+else:
+    <additional_statement(s)>
+```
+
+#### for
+
+for循环可以遍历任何序列的项目
+
+```python
+for <variable> in <sequence>:
+    <statements>
+else:
+    <statements>
+```
+
+#### break / continue
+
+## 七、迭代器和生成器
+
+### 迭代器
+
+迭代器是一个可以记住遍历位置的对象。迭代器对象从集合的第一个元素开始访问，知道所有的元素被访问结束。迭代器只能往前不能后退。
+
+迭代器有两个基本的方法：
+
+- `iter()`：创建迭代器对象
+
+- `next()`：指向迭代器的下一个元素
+
+---
+
+**`Note:`**
+
+`Stopiteration`异常用于标识迭代的完成，防止出现无限循环的情况。
+
+```python
+class MyNumber:
+    def __iter__(self):
+        self.a = 1
+        return self
+
+    def __next__(self):
+        if self.a <= 20:   # 迭代20次终止
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
+
+myclass = MyNumber()
+it = iter(myclass)
+
+for x in it:
+    print(x)
+```
+
+
+
+---
+
+### 生成器
+
+python中使用了`yield`的函数被称为生成器（generator）。跟普通函数不同的是，生成器是一个返回迭代器的函数，只能用于迭代操作。
+
+在调用生成器运行的过程中，每次遇到yield时函数，会暂停并保存当前所有的运行信息，返回yield的值，并在下一次执行next()方法时从当前位置继续运行。
+
+example：
+
+```python
+#!/usr/bin/python3
+ 
+import sys
+ 
+def fibonacci(n): # 生成器函数 - 斐波那契
+    a, b, counter = 0, 1, 0
+    while True:
+        if (counter > n): 
+            return
+        yield a
+        a, b = b, a + b
+        counter += 1
+f = fibonacci(10) # f 是一个迭代器，由生成器返回生成
+ 
+while True:
+    try:
+        print (next(f), end=" ")
+    except StopIteration:
+        sys.exit()
+```
+
+## 八、函数
+
+```python
+def 函数名 (参数列表):
+    函数体
+```
+
+
+
+## 九、数据结构
+
+
+
+## 十、文件
+
+
+
+## 十一、OS
+
+
+
+## 十二、面向对象
+
+
+
+## 十三、命名空间/作用域
+
+
+
+## 十四、模块和标准库

@@ -1,0 +1,3 @@
+fo.name:foo.txt
+fo.mode:w
+fo.closed:False
